@@ -1,0 +1,17 @@
+{
+  "name": "decoder-morse",
+  "version": "1.0.0",
+  "description": "React SPA Morse code decoder",
+  "main": "./src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "React",
+    "SPA",
+    "Morse-code",
+    "Decoder"
+  ],
+  "author": "Leandro Gavidia Santamaria <leandrogavidia1234@gmail.com>",
+  "license": "MIT"
+}
