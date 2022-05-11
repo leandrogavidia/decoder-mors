@@ -1,0 +1,31 @@
+@font-face {
+    font-family: "Teko";
+    src:
+        url("./assets/fonts/teko-v15-latin-300.woff") format("woff2"),
+        url("./assets/fonts/teko-v15-latin-300.woff2") format("woff");
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Teko";
+    src:
+        url("./assets/fonts/teko-v15-latin-500.woff") format("woff2"),
+        url("./assets/fonts/teko-v15-latin-500.woff2") format("woff");
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Teko";
+    src:
+        url("./assets/fonts/teko-v15-latin-700.woff") format("woff2"),
+        url("./assets/fonts/teko-v15-latin-700.woff2") format("woff");
+    font-weight: 700;
+    font-style: normal;
+}
+
+body {
+    background: yellow;
+    font-family: Teko, sans-serif;
+}
