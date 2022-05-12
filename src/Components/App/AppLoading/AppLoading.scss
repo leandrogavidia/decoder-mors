@@ -1,0 +1,20 @@
+.AppLoading {
+    position: relative;
+    top: 50%;
+    width: 100%;
+    padding: 0 3rem;
+    animation-name: AppLoading;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes AppLoading {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
