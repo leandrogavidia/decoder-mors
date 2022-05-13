@@ -4,6 +4,7 @@ import loadingDecoderMorsLogo from "@images/logo/loading-decoder-mors-logo.svg";
 import decoderMorsLogo from "@images/logo/decodermors-logo.svg";
 import closedMenu from "@images/closed-menu.svg";
 import openMenu from "@images/open-menu.svg";
+import githubLogo from "@images/social-media/github-logo.svg";
 
 const AppContext = React.createContext();
 
@@ -17,6 +18,7 @@ const AppProvider = (props) => {
     };
 
     const textLogo = "DecoderMors. Logo";
+    const textGithub = "GitHub Logo";
 
     return (
         <AppContext.Provider value={{
@@ -27,7 +29,9 @@ const AppProvider = (props) => {
             updateMenu,
             textLogo,
             isMenuOpen,
-            setIsMenuOpen
+            setIsMenuOpen,
+            githubLogo,
+            textGithub
         }} >
             {props.children}
         </AppContext.Provider>

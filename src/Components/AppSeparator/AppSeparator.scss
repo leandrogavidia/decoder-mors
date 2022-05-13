@@ -1,0 +1,10 @@
+@import "@vars";
+
+.App_separator {
+    position: relative;
+    z-index: 1000;
+    width: 100%;
+    height: 0.2rem;
+    margin: -0.26rem 0;
+    background-color: $primary-color;
+}

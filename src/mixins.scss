@@ -1,0 +1,8 @@
+@import "@vars";
+
+@mixin PhoneParagraph {
+    font: {
+        size: 1.6rem;
+        weight: $medium;
+    }
+}

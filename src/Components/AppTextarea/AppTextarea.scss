@@ -1,0 +1,18 @@
+@import "@vars";
+@import "@mixins";
+
+.App_textarea {
+    resize: none;
+    width: 100%;
+    height: 12rem;
+    background-color: $second-color;
+    border: none;
+    color: $white-color;
+    padding: 1rem 2rem;
+    line-height: 3.2rem;
+    letter-spacing: 0.2rem;
+    text-align: left;
+    caret-color: $primary-color;
+    margin: 0;
+    @include PhoneParagraph;
+}

@@ -1,0 +1,18 @@
+@import "@vars";
+@import "@mixins";
+
+.App_title {
+    @include PhoneParagraph;
+    line-height: 2;
+    text-align: center;
+    letter-spacing: 0.07rem;
+    padding: 0 2rem;
+    margin: 1.2rem 0;
+    .App_enlace-alfabeto {
+        color: $primary-color;
+        cursor: pointer;
+        &:hover {
+            color: $second-color;
+        }
+    }
+}

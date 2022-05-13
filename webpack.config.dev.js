@@ -23,6 +23,8 @@ module.exports = {
         extensions: [".js", ".jsx"],
         alias: {
             "@images": path.resolve(__dirname, "./src/assets/images"),
+            "@vars": path.resolve(__dirname, "./src/vars.scss"),
+            "@mixins": path.resolve(__dirname, "./src/mixins.scss")
         }
     },
 

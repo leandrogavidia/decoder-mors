@@ -1,4 +1,4 @@
-@import "./vars.scss";
+@import "@vars";
 
 @font-face {
     font-family: "Teko";
@@ -25,6 +25,11 @@
         url("./assets/fonts/teko-v15-latin-700.woff2") format("woff");
     font-weight: 700;
     font-style: normal;
+}
+
+  
+:focus-visible {
+    outline: 0.1rem $second-color solid;
 }
   
 * {
@@ -60,12 +65,4 @@ body {
     height: 100vh;
     background-color: $fourth-color;
     color: $third-color;
-}
-  
-:focus-visible {
-    outline: 0.1rem $second-color solid;
-}
-
-h1 {
-    font-size: 1.6rem;
 }
