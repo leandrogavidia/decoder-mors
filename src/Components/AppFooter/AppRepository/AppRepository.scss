@@ -1,0 +1,28 @@
+@use "@vars" as *;
+@use "@mixins" as *;
+
+a {
+    color: $white-color;
+    text-decoration: none;
+    margin: 2rem 0 4rem 0;
+}
+
+.App_footer-repository {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(1, auto);
+    width: 12rem;
+    min-height: 3rem;
+    background-color: $fourth-color;
+    justify-items: center;
+    align-items: center;
+    transition: background-color 0.2s;
+    &:hover, &:active {
+        background-color: $primary-color;
+    }
+    h3 {
+        @include PhoneParagraph;
+        letter-spacing: 0.05rem;
+        padding-top: 0.3rem;
+    }
+}

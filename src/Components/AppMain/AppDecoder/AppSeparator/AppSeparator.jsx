@@ -3,7 +3,7 @@ import "./AppSeparator.scss";
 
 const AppSeparator = () => {
     return (
-        <div className="App_separator"></div>
+        <div className="App_decoder-separator"></div>
     );
 };
 

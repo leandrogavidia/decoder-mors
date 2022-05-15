@@ -1,0 +1,16 @@
+@use "@mixins" as *;
+
+.App_footer-social-media h3 {
+     @include PhoneParagraphMedium;
+     text-align: center;
+     margin-bottom: 2.8rem;
+}
+
+.App_footer-social-media nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    & a:nth-child(even) {
+        margin: 0 2rem;
+    }
+}

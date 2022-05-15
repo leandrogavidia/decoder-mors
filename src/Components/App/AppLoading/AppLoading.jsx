@@ -7,7 +7,7 @@ const AppLoading = () => {
     const { textLogo, loadingDecoderMorsLogo } = React.useContext(AppContext);
 
     return (
-        <img className="AppLoading" src={loadingDecoderMorsLogo} alt={textLogo} title={textLogo} />
+        <img className="App_loading" src={loadingDecoderMorsLogo} alt={textLogo} title={textLogo} />
     );
 };
 

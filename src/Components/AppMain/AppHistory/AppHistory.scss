@@ -1,0 +1,32 @@
+@use "@vars" as *;
+@use "@mixins" as *;
+
+.App_history {
+    text-align: left;
+    &-title {
+        @include PhoneTitle;
+        color: $white-color;
+        margin: 4rem 2rem 2rem 2rem; 
+    }
+    
+    &-paragraph {
+        @include PhoneParagraphLight;
+        margin: 2rem 2rem 4rem 2rem;
+        line-height: 2.4rem;
+    }
+
+    &-paragraph strong {
+        font-weight: $medium;
+    }
+    
+    &-paragraph span {
+        color: $primary-color;
+        font-weight: $medium;
+        cursor: pointer;
+        transition: color 0.2s;
+        &:hover {
+            color: $second-color;
+        }
+    }
+}
+

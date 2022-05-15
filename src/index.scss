@@ -1,4 +1,4 @@
-@import "@vars";
+@use "@vars" as *;
 
 @font-face {
     font-family: "Teko";
@@ -64,5 +64,5 @@ body {
     font-family: Teko, sans-serif;
     height: 100vh;
     background-color: $fourth-color;
-    color: $third-color;
+    color: $white-color;
 }

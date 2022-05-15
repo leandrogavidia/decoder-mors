@@ -1,18 +1,30 @@
-@import "@vars";
-@import "@mixins";
+@use "@vars" as *;
+@use "@mixins" as *;
 
 .App_footer {
+    position: relative;
+    z-index: 500;
+    margin-top: -0.3rem;
+    padding: 4rem 4.5rem;
     width: 100%;
     background-color: $black-color;
-    padding: 4rem 4.5rem;
     &-container {
         display: grid;
-        grid-column: 1fr;
         grid-row: auto;
-        place-content: center;
+        justify-items: center;
+        align-items: center;
+        & > p {
+            font: {
+                size: 1.6rem;
+                weight: $light;
+            }
+            margin-top: 2rem;
+            letter-spacing: 0.05rem;
+        }
     }
     &-logo {
         width: 18rem;
         height: 2.4rem;
+        cursor: pointer;
     }
 }

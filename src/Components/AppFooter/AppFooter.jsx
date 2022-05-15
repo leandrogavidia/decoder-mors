@@ -1,6 +1,7 @@
 import React from "react";
 import { AppContext } from "../AppContext/AppContext";
-import { AppRepository } from "../AppRepository/AppRepository";
+import { AppRepository } from "./AppRepository/AppRepository";
+import { AppSocialMedia } from "./AppSocialMedia/AppSocialMedia";
 import "./AppFooter.scss";
 
 const AppFooter = () => {
@@ -14,10 +15,12 @@ const AppFooter = () => {
                     className="App_footer-logo"
                     src={decoderMorsLogo}
                     alt={textLogo}
-                    title={textLogo}
+                    title={textLogo} 
                     onClick={() => location.reload()}
                 />
                 <AppRepository />
+                <AppSocialMedia />
+                <p>Creado por: Leandro Gavidia Santamaria</p>
             </div>
         </footer>
     );

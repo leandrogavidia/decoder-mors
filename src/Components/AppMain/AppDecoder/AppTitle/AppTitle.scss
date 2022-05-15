@@ -1,14 +1,14 @@
-@import "@vars";
-@import "@mixins";
+@use "@vars" as *;
+@use "@mixins" as *;
 
-.App_title {
+.App_decoder-title {
     @include PhoneParagraph;
     line-height: 2;
     text-align: center;
     letter-spacing: 0.07rem;
     padding: 0 2rem;
     margin: 1.2rem 0;
-    .App_enlace-alfabeto {
+    .App_decoder-link {
         color: $primary-color;
         cursor: pointer;
         &:hover {

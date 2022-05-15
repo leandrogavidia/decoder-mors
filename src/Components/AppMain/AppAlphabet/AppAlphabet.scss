@@ -1,0 +1,82 @@
+@use "@vars" as *;
+@use "@mixins" as *;
+
+.App_alphabet {
+    text-align: left;
+    ol li {
+        &:nth-child(even) {
+            margin: 3rem 0;
+        }
+        &::marker {
+            color: $primary-color;
+            font-weight: $bold;
+        }
+    }
+    &-title {
+        @include PhoneTitle;
+        color: $white-color;
+        margin: 4rem 2rem 2rem 2rem; 
+    }
+    &-subtitle {
+        @include PhoneParagraphMedium;
+        margin: 0 2rem 0 2rem;
+    }
+    &-paragraph {
+        @include PhoneParagraphLight;
+        margin: 2rem 2rem 4rem 2rem;
+        line-height: 2.4rem;
+    }
+    &-standars {
+        margin-bottom: 2rem;
+    }
+    &-paragraph span {
+        color: $primary-color;
+        font-weight: $medium;
+        letter-spacing: 0.2rem;
+    }
+    ul {
+        list-style: square;
+        li::marker {
+            color: $primary-color;
+        }
+        li {
+            strong {
+                font-weight: $bold;
+            }
+        }
+    }
+    &-values {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: auto;
+        justify-items: start;
+        grid-gap: 1rem 0;
+        margin: 0 2rem;
+        & p {
+            font-size: 1.2rem;
+            & strong {
+                font-weight: $bold;
+                letter-spacing: 0.2rem;
+            }
+        }
+        &--first {
+            margin-top: 2rem;
+        }
+        &--second {
+            margin: 5rem 2rem;
+        }
+    }
+    & > p {
+        font-size: 1.2rem;
+        font-weight: $medium;
+        color: $primary-color;
+        margin: 4rem 2rem;
+        transition: color 0.2s;
+        cursor: pointer;
+        &:hover {
+            color: $second-color;
+        }
+    }
+}
+
+

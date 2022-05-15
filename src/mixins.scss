@@ -1,8 +1,29 @@
-@import "@vars";
+@use "@vars" as *;
+
+@mixin PhoneParagraphLight {
+    font: {
+        size: 1.2rem;
+        weight: $light;
+    }
+}
 
 @mixin PhoneParagraph {
     font: {
         size: 1.6rem;
         weight: $medium;
+    }
+}
+
+@mixin PhoneParagraphMedium {
+    font: {
+        size: 2rem;
+        weight: $medium;
+    }
+}
+
+@mixin PhoneTitle {
+    font: {
+        size: 2.4rem;
+        weight: $bold;
     }
 }

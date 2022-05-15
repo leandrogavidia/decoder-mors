@@ -1,18 +1,18 @@
-@import "@vars";
-@import "@mixins";
+@use "@vars" as *;
+@use "@mixins" as *;
 
-.App_textarea {
+.App_decoder-textarea {
     resize: none;
     width: 100%;
     height: 12rem;
-    background-color: $second-color;
+    background-color: inherit;
     border: none;
     color: $white-color;
-    padding: 1rem 2rem;
     line-height: 3.2rem;
     letter-spacing: 0.2rem;
     text-align: left;
     caret-color: $primary-color;
     margin: 0;
+    padding-right: 1.6rem;
     @include PhoneParagraph;
 }

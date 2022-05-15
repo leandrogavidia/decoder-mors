@@ -10,16 +10,22 @@ const AppHeader = () => {
         closedMenu,
         openMenu,
         isMenuOpen,
-        updateMenu
+        updateMenu,
+        mainDecoder,
+        mainContent,
+        mainWhat_Is_It,
+        mainHistory,
+        mainAlphabet,
+        setMainContent
     } = React.useContext(AppContext);
 
     return (
-        <header className="header">
-            <div className="header_container">
+        <header className="App_header">
+            <div className="App_header-container">
                 <figure>
                     <picture>
                         <img 
-                            className="header_logo"
+                            className="App_header-logo"
                             src={decoderMorsLogo}
                             alt={textLogo}
                             title={textLogo}
@@ -32,29 +38,29 @@ const AppHeader = () => {
                     <picture>
                         { !isMenuOpen 
                             ? <img
-                                className="header_menu--closed"
+                                className="App_header-menu--closed"
                                 src={closedMenu}
                                 alt="Menú de navegación cerrado."
                                 title="Menú de navegación cerrado."
                                 onClick={updateMenu}
                             /> 
                             : <img
-                                className="header_menu--closed"
+                                className="App_header-menu--open"
                                 src={openMenu}
-                                alt="Menú de navegación cerrado."
-                                title="Menú de navegación cerrado."
+                                alt="Menú de navegación abierto"
+                                title="Menú de navegación abierto"
                                 onClick={updateMenu}
                             />  }
 
                     </picture>
                 </figure>
 
-                <nav className={`header_menu ${!isMenuOpen ? "header_menu--hidden" : ""}`}>
+                <nav className={`App_header-menu ${!isMenuOpen ? "App_header-menu--hidden" : ""}`}>
                     <ul>
-                        <li>Decodificador</li>
-                        <li>¿Qué es el código Morse?</li>
-                        <li>Historia del código Morse</li>
-                        <li>Alfabeto</li>
+                        <li className={mainContent === mainDecoder ? "App_header-item--active" : null } onClick={() => setMainContent(mainDecoder)}>Decodificador</li>
+                        <li className={mainContent === mainWhat_Is_It ? "App_header-item--active" : null } onClick={() => setMainContent(mainWhat_Is_It)}>¿Qué es el código Morse?</li>
+                        <li className={mainContent === mainHistory ? "App_header-item--active" : null } onClick={() => setMainContent(mainHistory)}>Historia del código Morse</li>
+                        <li className={mainContent === mainAlphabet ? "App_header-item--active" : null } onClick={() => setMainContent(mainAlphabet)}>Alfabeto</li>
                     </ul>
                 </nav>
             </div>
