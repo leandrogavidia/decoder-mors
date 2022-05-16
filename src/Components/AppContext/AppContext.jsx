@@ -9,7 +9,7 @@ import instagramLogo from "@images/social-media/instagram-logo.svg";
 import twitterLogo from "@images/social-media/twitter-logo.svg";
 import linkedinLogo from "@images/social-media/linkedin-logo.svg";
 import githubLogo from "@images/social-media/github-logo.svg";
-import { MorseAlphabet, DecodeMessage } from "@utils/morseAlphabet.js";
+import { MorseAlphabetValues } from "@MorseCode";
 
 const AppContext = React.createContext();
 
@@ -20,18 +20,63 @@ const AppProvider = (props) => {
     const mainHistory = "History";
     const mainAlphabet = "Alphabet";
 
-    const MorseAlphabetKeys = Object.keys(MorseAlphabet);
-    const MorseAlphabetValues = Object.values(MorseAlphabet);
+    const spanish = "Spanish";
+    const morse = "Morse";
 
-    const MorseAlphabetLetters = MorseAlphabetValues.join("").replace(/[^a-z]/gi, "").split("");
-    const MorseAlphabetNumbers = MorseAlphabetValues.join("").replace(/[^0-9]/gi, "").split("");
-    const MorseAlphabetSymbols = MorseAlphabetValues.join("").replace(/[a-z0-9]/gi, "").split("");
+    const defaultTextareaCode = ". ... -.-. .-. .. -... .   .- .-.. --. ---";
 
     const [ isMenuOpen, setIsMenuOpen ] = React.useState(false);
-    const [ mainContent, setMainContent ] = React.useState(mainAlphabet);
+    const [ mainContent, setMainContent ] = React.useState(mainDecoder);
+    const [ textareaContent, setTextareaContent ] = React.useState(defaultTextareaCode);
+    const [ inputLenguage, setInputLenguage ] = React.useState(morse);
  
     const updateMenu = () => {
         setIsMenuOpen(prevValue => !prevValue);
+    };
+
+    let morseValues = MorseAlphabetValues.join("");
+    let templateRegularExpresion = "[^\\s" + morseValues + "]";
+    let morseRegularExpresion = new RegExp(templateRegularExpresion, "gi");
+
+    /* morseRegularExpresion
+
+    /[^\sABCDEFGHIJKLMNÑOPQRSTUVWXYZ1234567890.,¿?¡!:;'´=/()&+-_$@]/gi */
+
+    const onChangeMorseValueText = (event) => {
+        const value = event.target.value;
+        setTextareaContent(value.replace(/[^\s.-]/gi, "").toUpperCase());
+        console.log(textareaContent);
+    };
+
+    const onChangeSpanishValueText = (event) => {
+        const value = event.target.value;
+        setTextareaContent(value.replace(morseRegularExpresion, "").toUpperCase());
+        console.log(textareaContent);
+    };
+
+    const copyValueText = () => {
+        const textareaElement = document.getElementById("textarea-result");
+        const content = textareaElement.innerHTML;
+        navigator.clipboard.writeText(content)
+            .then(
+                () => {
+                    let newNotification = document.createElement("span");
+                    newNotification.setAttribute("class", "App-coder-notification");
+
+                    let contentNotification = document.createTextNode("¡Traducción copiada!");
+                    newNotification.appendChild(contentNotification);
+
+                    let buttonsZone = document.getElementsByClassName("App_decoder-buttons")[1];
+                    buttonsZone.appendChild(newNotification);
+                    
+                    setTimeout(() => {
+                        buttonsZone.removeChild(newNotification);
+                    }, 3000);
+                }
+            )
+            .catch(err => {
+                console.error("Hubo un problema:", err);
+            });
     };
 
     const socialMedia = [
@@ -81,11 +126,15 @@ const AppProvider = (props) => {
             mainAlphabet,
             mainContent,
             setMainContent,
-            MorseAlphabetKeys,
-            MorseAlphabetValues,
-            MorseAlphabetLetters,
-            MorseAlphabetNumbers,
-            MorseAlphabetSymbols
+            textareaContent,
+            setTextareaContent,
+            inputLenguage,
+            setInputLenguage,
+            spanish,
+            morse,
+            copyValueText,
+            onChangeMorseValueText,
+            onChangeSpanishValueText
         }} >
             {props.children}
         </AppContext.Provider>

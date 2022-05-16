@@ -1,4 +1,5 @@
 @use "@vars" as *;
+@use "@mixins" as *;
 
 .App_decoder-Container {
     display: grid;
@@ -12,9 +13,23 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
+        align-items: flex-end;
         & button:nth-child(2) {
             margin: 0.5rem 0;
+        }
+    }
+    .App-coder-notification {
+        display: inline-block;
+        background-color: $third-color;
+        color: $second-color;
+        text-align: center;
+        width: 100%;
+        min-height: 2rem;
+        padding: 0.8rem 1rem 0.5rem 1rem;
+        margin-top: 0.8rem;
+        font: {
+            size: 1.2rem;
+            font-weight: $medium;
         }
     }
 }

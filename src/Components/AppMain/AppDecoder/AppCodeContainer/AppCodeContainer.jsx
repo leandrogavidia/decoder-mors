@@ -1,19 +1,31 @@
 import React from "react";
-import { AppButton } from "../AppButton/AppButton";
 import { AppTextarea } from "../AppTextarea/AppTextarea";
+import PropTypes from "prop-types";
 import "./AppCodeContainer.scss";
 
-const AppCodeContainer = () => {
+const AppCodeContainer = (props) => {
+
     return (
-        <section className="App_decoder-Container">
-            <AppTextarea />
+        <label className="App_decoder-Container">
+
+            <AppTextarea
+                defaultValue={props.defaultValue}
+                textareaFuction={props.textareaFuction}
+                idName={props.idName}
+            />
+            
             <div className="App_decoder-buttons">
-                <AppButton buttonText="Borrar" buttonFunction={() => console.log("Borrar")} />
-                <AppButton buttonText="Morse" buttonFunction={() => console.log("Morse")} />
-                <AppButton buttonText="Español" buttonFunction={() => console.log("Español")} />
+                {props.children}
             </div>
-        </section>
+        </label>
     );
+};
+
+AppCodeContainer.propTypes = {
+    children: PropTypes.element.isRequired,
+    defaultValue: PropTypes.string.isRequired,
+    textareaFuction: PropTypes.func,
+    idName: PropTypes.string
 };
 
 export { AppCodeContainer };

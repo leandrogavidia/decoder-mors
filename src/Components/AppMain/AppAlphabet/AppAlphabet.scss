@@ -36,6 +36,7 @@
     }
     ul {
         list-style: square;
+        margin: 0 2rem;
         li::marker {
             color: $primary-color;
         }
@@ -54,9 +55,11 @@
         margin: 0 2rem;
         & p {
             font-size: 1.2rem;
+            color: $primary-color;
+            letter-spacing: 0.2rem;
             & strong {
+                color: $white-color;
                 font-weight: $bold;
-                letter-spacing: 0.2rem;
             }
         }
         &--first {
@@ -67,6 +70,7 @@
         }
     }
     & > p {
+        display: inline-block;
         font-size: 1.2rem;
         font-weight: $medium;
         color: $primary-color;

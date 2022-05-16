@@ -10,9 +10,13 @@
     color: $white-color;
     line-height: 3.2rem;
     letter-spacing: 0.2rem;
+    vertical-align: baseline;
     text-align: left;
     caret-color: $primary-color;
     margin: 0;
     padding-right: 1.6rem;
     @include PhoneParagraph;
+    &::placeholder {
+        color: rgba(255, 255, 255, 0.6);
+    }
 }

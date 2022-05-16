@@ -36,25 +36,25 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    // scrollbar-width: thin;
-    // scrollbar-color: var(--third-color) rgba(255, 255, 255, 0);
+    scrollbar-width: thin;
+    scrollbar-color: $primary-color rgba(0, 0, 0, 0);
 }
   
   /* Works on Chrome, Edge, and Safari */
 
-// *::-webkit-scrollbar {
-//     width: 0.8rem;
-// }
+*::-webkit-scrollbar {
+    width: 0.4rem;
+}
   
-// *::-webkit-scrollbar-track {
-//     background: rgba(255, 255, 255, 0);
-// }
+*::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0);
+}
   
-// *::-webkit-scrollbar-thumb {
-//     background-color: var(--third-color);
-//     border-radius: 2rem;
-//     border: none;
-// }
+*::-webkit-scrollbar-thumb {
+    background-color: $primary-color;
+    border-radius: 2rem;
+    border: none;
+}
   
 html {
     font-size: 62.5%;

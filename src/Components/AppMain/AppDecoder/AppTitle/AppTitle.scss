@@ -7,7 +7,7 @@
     text-align: center;
     letter-spacing: 0.07rem;
     padding: 0 2rem;
-    margin: 1.2rem 0;
+    margin: 2rem 2rem 0 2rem;
     .App_decoder-link {
         color: $primary-color;
         cursor: pointer;
@@ -15,4 +15,12 @@
             color: $second-color;
         }
     }
+}
+
+.App_decoder-paragraph {
+    @include PhoneParagraphLight;
+    margin: 2rem;
+    text-align: center;
+    line-height: 2;
+    letter-spacing: 0.07rem;
 }
