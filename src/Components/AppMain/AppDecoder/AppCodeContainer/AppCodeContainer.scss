@@ -33,3 +33,31 @@
         }
     }
 }
+
+
+@media (min-width: 600px) {
+    .App_decoder-Container {
+        .App_decoder-buttons {
+            & button:nth-child(2) {
+                margin: 0.8rem 0;
+            }
+        }
+    }
+}
+
+@media (min-width: 1000px) {
+    .App_decoder-Container {
+        padding: 2rem 3rem;
+        .App_decoder-buttons {
+            & button:nth-child(2) {
+                margin: 1.2rem 0;
+            }
+        }
+        .App-coder-notification {
+            min-height: 2.8rem;
+            font: {
+                size: 2rem;
+            }
+        }
+    }
+}

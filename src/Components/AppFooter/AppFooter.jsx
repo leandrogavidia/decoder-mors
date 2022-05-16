@@ -11,13 +11,17 @@ const AppFooter = () => {
     return ( 
         <footer className="App_footer">
             <div className="App_footer-container">
-                <img
-                    className="App_footer-logo"
-                    src={decoderMorsLogo}
-                    alt={textLogo}
-                    title={textLogo} 
-                    onClick={() => location.reload()}
-                />
+                <figure>
+                    <picture>
+                        <img
+                            className="App_footer-logo"
+                            src={decoderMorsLogo}
+                            alt={textLogo}
+                            title={textLogo} 
+                            onClick={() => location.reload()}
+                        />
+                    </picture>
+                </figure>
                 <AppRepository />
                 <AppSocialMedia />
                 <p>Creado por: Leandro Gavidia Santamaria</p>

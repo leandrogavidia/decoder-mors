@@ -8,7 +8,7 @@ const AppRepository = () => {
     const { image, text } = socialMedia[4];
 
     return (
-        <a href="https://google.com" target="_blank" rel="noreferrer">
+        <a className="App_footer-container-repository" href="https://google.com" target="_blank" rel="noreferrer">
             <div className="App_footer-repository">
                 <h3>REPOSITORIO</h3>
                 <img src={image} alt={text} title={text} />

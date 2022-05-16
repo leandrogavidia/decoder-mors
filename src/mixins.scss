@@ -7,12 +7,41 @@
     }
 }
 
+@mixin TabletParagraphLight {
+    font: {
+        size: 2rem;
+        weight: $light;
+    }
+}
+
+@mixin DesktopParagraphLight {
+    font: {
+        size: 2.4rem;
+        weight: $light;
+    }
+}
+
 @mixin PhoneParagraph {
     font: {
         size: 1.6rem;
         weight: $medium;
     }
 }
+
+@mixin TabletParagraph {
+    font: {
+        size: 2.4rem;
+        weight: $medium;
+    }
+}
+
+@mixin DesktopParagraph {
+    font: {
+        size: 2.8rem;
+        weight: $medium;
+    }
+}
+
 
 @mixin PhoneParagraphMedium {
     font: {
@@ -21,9 +50,37 @@
     }
 }
 
+@mixin TabletParagraphMedium {
+    font: {
+        size: 2.8rem;
+        weight: $medium;
+    }
+}
+
+@mixin DesktopParagraphMedium {
+    font: {
+        size: 3.6rem;
+        weight: $medium;
+    }
+}
+
 @mixin PhoneTitle {
     font: {
         size: 2.4rem;
+        weight: $bold;
+    }
+}
+
+@mixin TabletTitle {
+    font: {
+        size: 3.2rem;
+        weight: $bold;
+    }
+}
+
+@mixin DesktopTitle {
+    font: {
+        size: 4rem;
         weight: $bold;
     }
 }

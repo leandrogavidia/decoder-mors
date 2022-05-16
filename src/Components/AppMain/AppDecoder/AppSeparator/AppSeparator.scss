@@ -8,3 +8,10 @@
     margin: -0.26rem 0;
     background-color: $primary-color;
 }
+
+@media (min-width: 600px) {
+    .App_decoder-separator {
+        width: 0.2rem;
+        height: 100%;
+    }
+}

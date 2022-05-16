@@ -20,3 +20,17 @@
         color: rgba(255, 255, 255, 0.6);
     }
 }
+
+@media (min-width: 600px) {
+    .App_decoder-textarea {
+        height: 20rem;
+    };
+}
+
+@media (min-width: 1000px) {
+    .App_decoder-textarea {
+        height: 28rem;
+        letter-spacing: 0.4rem;
+        @include DesktopParagraph;
+    };
+}

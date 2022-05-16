@@ -14,3 +14,24 @@
         margin: 0 2rem;
     }
 }
+
+@media (min-width: 600px) {
+    .App_footer-social-media {
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+        justify-self: end;
+        h3 {
+            text-align: left;
+            @include TabletParagraphMedium;
+        }
+    }
+}
+
+@media (min-width: 1000px) {
+    .App_footer-social-media {
+        justify-self: center;
+        h3 {
+            @include DesktopParagraphMedium;
+        }
+    }
+}

@@ -15,6 +15,26 @@ const AppContext = React.createContext();
 
 const AppProvider = (props) => {
 
+    const decoderSessionStorage = sessionStorage.getItem("DECODER_V1");
+    const lenguageSessionStorage = sessionStorage.getItem("LENGUAGE_V1");
+    
+    let defaultTextareaCode;
+    let lenguageValue;
+
+    if (!decoderSessionStorage) {
+        sessionStorage.setItem("DECODER_V1", ". ... -.-. .-. .. -... .   .- .-.. --. ---");
+        defaultTextareaCode = ". ... -.-. .-. .. -... .   .- .-.. --. ---";
+    } else {
+        defaultTextareaCode = decoderSessionStorage;
+    }
+
+    if (!lenguageSessionStorage) {
+        sessionStorage.setItem("LENGUAGE_V1", "Morse");
+        lenguageValue = "Morse";
+    } else {
+        lenguageValue = lenguageSessionStorage;
+    }
+
     const mainDecoder = "Decoder";
     const mainWhat_Is_It = "What is it";
     const mainHistory = "History";
@@ -23,12 +43,11 @@ const AppProvider = (props) => {
     const spanish = "Spanish";
     const morse = "Morse";
 
-    const defaultTextareaCode = ". ... -.-. .-. .. -... .   .- .-.. --. ---";
 
     const [ isMenuOpen, setIsMenuOpen ] = React.useState(false);
     const [ mainContent, setMainContent ] = React.useState(mainDecoder);
     const [ textareaContent, setTextareaContent ] = React.useState(defaultTextareaCode);
-    const [ inputLenguage, setInputLenguage ] = React.useState(morse);
+    const [ inputLenguage, setInputLenguage ] = React.useState(lenguageValue);
  
     const updateMenu = () => {
         setIsMenuOpen(prevValue => !prevValue);
@@ -44,14 +63,18 @@ const AppProvider = (props) => {
 
     const onChangeMorseValueText = (event) => {
         const value = event.target.value;
-        setTextareaContent(value.replace(/[^\s.-]/gi, "").toUpperCase());
-        console.log(textareaContent);
+        const newValue = value.replace(/[^\s.-]/gi, "").toUpperCase();
+
+        sessionStorage.setItem("DECODER_V1", newValue);
+        setTextareaContent(newValue);
     };
 
     const onChangeSpanishValueText = (event) => {
         const value = event.target.value;
-        setTextareaContent(value.replace(morseRegularExpresion, "").toUpperCase());
-        console.log(textareaContent);
+        const newValue = value.replace(morseRegularExpresion, "").toUpperCase();
+
+        sessionStorage.setItem("DECODER_V1", newValue);
+        setTextareaContent(newValue);
     };
 
     const copyValueText = () => {
@@ -77,6 +100,11 @@ const AppProvider = (props) => {
             .catch(err => {
                 console.error("Hubo un problema:", err);
             });
+    };
+
+    const updateLenguage = (option) => {
+        sessionStorage.setItem("LENGUAGE_V1", option);
+        setInputLenguage(option);
     };
 
     const socialMedia = [
@@ -134,7 +162,8 @@ const AppProvider = (props) => {
             morse,
             copyValueText,
             onChangeMorseValueText,
-            onChangeSpanishValueText
+            onChangeSpanishValueText,
+            updateLenguage
         }} >
             {props.children}
         </AppContext.Provider>

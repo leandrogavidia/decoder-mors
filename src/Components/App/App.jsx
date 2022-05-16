@@ -6,13 +6,13 @@ import "./App.scss";
 
 function App() {
 
-    const [seeInterface, setSeeInterface] = React.useState(true);
+    const [seeInterface, setSeeInterface] = React.useState(false);
 
-    // React.useEffect(() => {
-    //     setTimeout(() => {
-    //         setSeeInterface(prevState => !prevState);
-    //     }, 3000);
-    // }, []);
+    React.useEffect(() => {
+        setTimeout(() => {
+            setSeeInterface(prevState => !prevState);
+        }, 3000);
+    }, []);
 
     return (
         <AppProvider>

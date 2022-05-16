@@ -28,3 +28,54 @@
         cursor: pointer;
     }
 }
+
+@media (min-width: 600px) {
+    .App_footer {
+        &-container {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(3, auto);
+            justify-items: start;
+            align-items: start;
+            figure {
+                justify-self: center; 
+                    .App_footer-logo {
+                        width: 100%;
+                    }
+                }
+            &  .App_footer-logo {
+                grid-column: 1 / 2;
+                grid-row: 1 / 2;
+            }
+            & > p {
+                grid-column: 1 / 2;
+                grid-row: 3 / 4;
+                font-size: 2rem;
+                justify-self: center;
+                margin-top: 2.4rem;
+            }
+        }
+    }
+}
+
+@media (min-width: 1000px) {
+    .App_footer {
+        padding: 5rem;
+        &-container {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(3, auto);
+            justify-items: start;
+            align-items: start;
+            figure {
+                .App_footer-logo {
+                    height: 3.6rem;
+                }
+            }
+            & > p {
+                grid-column: 1 / 2;
+                grid-row: 3 / 4;
+                font-size: 2rem;
+                margin-top: 3.2rem;
+            }
+        }
+    }
+}

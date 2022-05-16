@@ -19,8 +19,34 @@
 
 .App_decoder-paragraph {
     @include PhoneParagraphLight;
-    margin: 2rem;
+    margin: 0 2rem 2rem 2rem;
     text-align: center;
     line-height: 2;
     letter-spacing: 0.07rem;
+}
+
+@media (min-width: 600px) {
+    .App_decoder-title {
+        @include TabletParagraph;
+        grid-column: 1 / 4;
+        grid-row: 1 / 2;
+    }
+    .App_decoder-paragraph {
+        @include TabletParagraphLight;
+        grid-column: 1 / 4;
+        grid-row: 2 / 3;
+    }
+}
+
+@media (min-width: 1000px) {
+    .App_decoder-title {
+        font-size: 3.6rem;
+        grid-column: 1 / 4;
+        grid-row: 1 / 2;
+    }
+    .App_decoder-paragraph {
+        @include DesktopParagraphLight;
+        grid-column: 1 / 4;
+        grid-row: 2 / 3;
+    }
 }

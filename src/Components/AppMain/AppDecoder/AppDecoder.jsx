@@ -5,6 +5,7 @@ import { AppCodeContainer } from "./AppCodeContainer/AppCodeContainer";
 import { AppSeparator } from "./AppSeparator/AppSeparator";
 import { AppButton } from "./AppButton/AppButton";
 import { DecodeMessage, encryptMessage } from "@MorseCode";
+import "./AppDecoder.scss";
 
 const AppDecoder = () => {
 
@@ -12,48 +13,56 @@ const AppDecoder = () => {
         textareaContent,
         setTextareaContent,
         inputLenguage,
-        setInputLenguage,
+        updateLenguage,
         morse,
         spanish,
         copyValueText,
         onChangeMorseValueText,
-        onChangeSpanishValueText
+        onChangeSpanishValueText,
     } = React.useContext(AppContext);
     
     const contentResult = inputLenguage === morse ? DecodeMessage(textareaContent) : encryptMessage(textareaContent);
-
+ 
+    const deleteContent = () => {
+        sessionStorage.removeItem("DECODER_V1");
+        setTextareaContent("");
+    };
+    
     return (
-        <React.Fragment>
+        <section className="App_decoder-section">
             <AppTitle />
-            
-            <AppCodeContainer defaultValue={textareaContent} textareaFuction={inputLenguage === morse ? onChangeMorseValueText : onChangeSpanishValueText} idName="textarea-input">
-                <React.Fragment>
-                    <AppButton
-                        buttonText="Borrar"
-                        buttonFunction={() => setTextareaContent("")}
-                    />
-                    <AppButton
-                        idName="morse-button"
-                        buttonText="Morse"
-                        buttonFunction={() => setInputLenguage(morse)}
-                    />
-                    <AppButton
-                        idName="spanish-button"
-                        buttonText="Español"
-                        buttonFunction={() => setInputLenguage(spanish)}
-                    />
-                </React.Fragment>
-            </AppCodeContainer >
 
-            <AppSeparator />
+            <div className="App_decoder-inputs-container">
+                <AppCodeContainer defaultValue={textareaContent} textareaFuction={inputLenguage === morse ? onChangeMorseValueText : onChangeSpanishValueText} idName="textarea-input">
+                    <React.Fragment>
+                        <AppButton
+                            buttonText="Borrar"
+                            buttonFunction={deleteContent}
+                        />
+                        <AppButton
+                            idName="morse-button"
+                            buttonText="Morse"
+                            buttonFunction={() => updateLenguage(morse)}
+                        />
+                        <AppButton
+                            idName="spanish-button"
+                            buttonText="Español"
+                            buttonFunction={() => updateLenguage(spanish)}
+                        />
+                    </React.Fragment>
+                </AppCodeContainer >
+
+                <AppSeparator />
             
-            <AppCodeContainer defaultValue={contentResult} idName="textarea-result" >
-                <AppButton
-                    buttonText="Copiar"
-                    buttonFunction={copyValueText}
-                />
-            </AppCodeContainer >
-        </React.Fragment>
+                <AppCodeContainer defaultValue={contentResult} idName="textarea-result" >
+                    <AppButton
+                        buttonText="Copiar"
+                        buttonFunction={copyValueText}
+                    />
+                </AppCodeContainer >
+            </div>
+            
+        </section>
     );
 };
 

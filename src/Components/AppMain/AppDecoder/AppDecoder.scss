@@ -1,0 +1,26 @@
+@use "@vars" as *;
+
+@media (min-width: 600px) {
+    .App_decoder-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        .App_decoder-inputs-container {
+            display: grid;
+            width: 100%;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr;
+            label:first-child {
+                grid-column: 1 / 2;
+                border-right: 0.2rem solid $primary-color;
+            }
+            & > div {
+                display: none;
+            }
+            label:last-child {
+                grid-column: 2 / 3;
+            }
+        }
+    }
+}

@@ -64,3 +64,52 @@
         cursor: pointer;
     }
 }
+
+@media (min-width: 600px) {
+    .App_header {
+        &-container {
+            .App_header-menu ul li {
+                @include TabletParagraphMedium;
+            }
+        } 
+    }
+}
+
+@media (min-width: 1000px) {
+    .App_header {
+        &-container figure:nth-child(2) {
+            display: none;
+        }
+        &-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 2.4rem 4rem;
+            .App_header-logo {
+                width: 22.4rem;
+                height: 2.6rem;
+                cursor: pointer;
+            }
+            .App_header-menu--hidden {
+                display: block;
+            }
+            .App_header-menu {
+                margin: 0;
+                ul {
+                    display: flex;
+                    li {
+                        display: inline;
+                        border-bottom: none;
+                        padding: 0;
+                        font-size: 2rem;
+                    }
+                    li:nth-child(even) {
+                        margin: 0 2.8rem;
+                    }
+                    li:last-child {
+                        margin-right: 0;
+                }}
+            }
+    }
+    }
+}

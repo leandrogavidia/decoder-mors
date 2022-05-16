@@ -18,3 +18,15 @@
         opacity: 1;
     }
 }
+
+@media (min-width: 600px) {
+    .App_loading {
+        padding: 0 6rem;
+    }
+}
+
+@media (min-width: 1000px) {
+    .App_loading {
+        padding: 0 8rem;
+    }
+}
