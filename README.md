@@ -8,17 +8,17 @@
 
 ---
 
-## Main technologies:
+## **Main technologies:**
 
 | ![React](https://www.vectorlogo.zone/logos/reactjs/reactjs-ar21.svg) | ![SASS](https://www.vectorlogo.zone/logos/sass-lang/sass-lang-ar21.svg) | ![Webpack](https://www.vectorlogo.zone/logos/js_webpack/js_webpack-ar21.svg) |
 |--|--|--|
 
-## To initialize the project:
+## **To initialize the project:**
 
-1. **npm install**
-2. **npm run start**
+1. npm install
+2. npm run start
 
-## Commands
+## **Commands:**
 
 - **npm run build:** To compile the App for production in the "dist" folder.
 - **npm run dev:** To compile the App in development mode.

@@ -1,6 +1,6 @@
 .App_loading {
     position: relative;
-    top: 50%;
+    top: 45%;
     width: 100%;
     padding: 0 3rem;
     animation-name: AppLoading;
@@ -28,5 +28,6 @@
 @media (min-width: 1000px) {
     .App_loading {
         padding: 0 8rem;
+        top: 40%;
     }
 }
