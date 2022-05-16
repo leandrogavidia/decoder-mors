@@ -1,4 +1,4 @@
-![DecoderMors. Logo](./src/assets/images/logo/decodermors-logo.svg);
+![DecoderMors. Logo](./src/assets/images/logo/decodermors-logo.svg)
 <!-- # Decoder Mors.  -->
 ## SPA to decode and encrypt Morse code.
 
