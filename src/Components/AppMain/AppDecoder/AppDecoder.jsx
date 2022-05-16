@@ -11,7 +11,6 @@ const AppDecoder = () => {
 
     const { 
         textareaContent,
-        setTextareaContent,
         inputLenguage,
         updateLenguage,
         morse,
@@ -19,14 +18,12 @@ const AppDecoder = () => {
         copyValueText,
         onChangeMorseValueText,
         onChangeSpanishValueText,
+        deleteContent
     } = React.useContext(AppContext);
     
     const contentResult = inputLenguage === morse ? DecodeMessage(textareaContent) : encryptMessage(textareaContent);
  
-    const deleteContent = () => {
-        sessionStorage.removeItem("DECODER_V1");
-        setTextareaContent("");
-    };
+
     
     return (
         <section className="App_decoder-section">

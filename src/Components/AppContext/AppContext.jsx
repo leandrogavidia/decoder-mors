@@ -107,6 +107,11 @@ const AppProvider = (props) => {
         setInputLenguage(option);
     };
 
+    const deleteContent = () => {
+        sessionStorage.removeItem("DECODER_V1");
+        setTextareaContent("");
+    };
+
     const socialMedia = [
         {
             text: "Facebook Logo",
@@ -163,7 +168,8 @@ const AppProvider = (props) => {
             copyValueText,
             onChangeMorseValueText,
             onChangeSpanishValueText,
-            updateLenguage
+            updateLenguage,
+            deleteContent
         }} >
             {props.children}
         </AppContext.Provider>
