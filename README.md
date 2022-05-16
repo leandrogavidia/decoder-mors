@@ -24,18 +24,16 @@
 - **npm run dev:** To compile the App in development mode.
 - **npm run start:** To set up a development server and work on the App.
 
-## How does it work?
-
-How does it work?
+## **How does it work?**
 
 The single page Application has 2 fields, one for writing and the other for translation. In the first, the user enters the message that he wants to decode or encrypt, depending on the mode, and the result (translation) is shown in the second field.
 
-Available modes: Morse and Spanish.
+**Available modes:** Morse and Spanish.
 
-It has 3 other sections: What is Morse code?, History and the alphabet.
+**It has 3 other sections:** What is Morse code?, History and the alphabet.
 
-## How can you contribute?
+## **How can you contribute?**
 
 Make a fork of the project and once you have created your changes, request a push request to verify it and then accept or reject it.
 
-## LINCESE: MIT
+## **LINCESE:** MIT
