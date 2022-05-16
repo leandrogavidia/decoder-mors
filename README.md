@@ -1,4 +1,4 @@
-# DecoderMors.
+# **DecoderMors.**
 
 ## SPA to decode and encrypt Morse code.
 

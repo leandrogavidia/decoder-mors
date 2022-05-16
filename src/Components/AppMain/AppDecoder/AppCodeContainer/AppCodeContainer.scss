@@ -1,5 +1,4 @@
 @use "@vars" as *;
-@use "@mixins" as *;
 
 .App_decoder-Container {
     display: grid;
@@ -29,7 +28,7 @@
         margin-top: 0.8rem;
         font: {
             size: 1.2rem;
-            font-weight: $medium;
+            weight: $medium;
         }
     }
 }
