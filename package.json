@@ -6,7 +6,9 @@
   "scripts": {
     "build": "webpack --config webpack.config.js",
     "dev": "webpack --config webpack.config.dev.js",
-    "start": "webpack serve --config webpack.config.dev.js"
+    "start": "webpack serve --config webpack.config.dev.js",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "keywords": [
     "React",
@@ -32,6 +34,7 @@
     "eslint": "8.15.0",
     "eslint-plugin-react": "7.29.4",
     "file-loader": "6.2.0",
+    "gh-pages": "4.0.0",
     "html-loader": "3.1.0",
     "html-webpack-plugin": "5.5.0",
     "mini-css-extract-plugin": "2.6.0",
@@ -48,5 +51,6 @@
     "prop-types": "15.8.1",
     "react": "18.1.0",
     "react-dom": "18.1.0"
-  }
+  },
+  "homepage": "https://leandergs.github.io/decoder-mors"
 }
