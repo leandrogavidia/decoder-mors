@@ -36,4 +36,4 @@ The single page Application has 2 fields, one for writing and the other for tran
 
 Make a fork of the project and once you have created your changes, request a push request to verify it and then accept or reject it.
 
-## **LINCESE:** MIT
+## **LICENSE:** MIT
