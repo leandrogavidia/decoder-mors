@@ -3,6 +3,8 @@
 
 .App_alphabet {
     text-align: left;
+    max-width: 1920px;
+    margin: 0 auto;
     ol li {
         &:nth-child(even) {
             margin: 3rem 0;

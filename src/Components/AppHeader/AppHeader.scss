@@ -7,6 +7,8 @@
     min-height: 5.8rem;
     &-container {
         width: inherit;
+        max-width: 1920px;
+        margin: 0 auto;
         height: inherit;
         padding: 2rem;
         display: grid;

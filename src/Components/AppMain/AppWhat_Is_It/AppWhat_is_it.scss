@@ -3,6 +3,8 @@
 
 .App_what {
     text-align: left;
+    max-width: 1920px;
+    margin: 0 auto;
     &-title {
         @include PhoneTitle;
         color: $white-color;

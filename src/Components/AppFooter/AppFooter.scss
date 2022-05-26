@@ -9,6 +9,9 @@
     width: 100%;
     background-color: $black-color;
     &-container {
+        width: inherit;
+        max-width: 1920px;
+        margin: 0 auto;
         display: grid;
         grid-row: auto;
         justify-items: center;

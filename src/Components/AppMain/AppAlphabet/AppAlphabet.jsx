@@ -35,7 +35,7 @@ const AppAlphabet = () => {
                     <span>“.... --- .-.. .- &nbsp; -- ..- -. -.. ---“</span>  En este anterior mensaje tenemos la oración HOLA MUNDO.
                 </li>
                 <li>
-                Es importante saber que los espacios al inicio y final del mensaje no se tienen en cuenta, es decir si escribes: <span>“&nbsp; .... --- .-.. .-   -- ..- -. -.. --- &nbsp;“</span> no tendrás <span>“&nbsp; HOLA MUNDO &nbsp;“</span> sino <span>“HOLA MUNDO”</span>. 
+                Es importante saber que los espacios al inicio y final del mensaje no se tienen en cuenta, es decir si escribes: &nbsp;<span>“&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .... --- .-.. .-   -- ..- -. -.. --- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;“</span> no tendrás <span>“&nbsp; HOLA MUNDO &nbsp;“</span> sino <span>“HOLA MUNDO”</span>. 
                 </li>
             </ol
             >
