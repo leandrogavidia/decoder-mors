@@ -116,27 +116,27 @@ const AppProvider = (props) => {
         {
             text: "Facebook Logo",
             image: facebookLogo,
-            url: "https://www.facebook.com/LeanderGS/"
+            url: "https://www.facebook.com/androgavidia/"
         },
         {
             text: "Instagram Logo",
             image: instagramLogo,
-            url: "https://www.instagram.com/leander_gs/"
+            url: "https://www.instagram.com/androgavidia/"
         },
         {
             text: "Twitter Logo",
             image: twitterLogo,
-            url: "https://twitter.com/Leander_GS/"
+            url: "https://twitter.com/androgavidia/"
         },
         {
             text: "LinkedIn Logo",
             image: linkedinLogo,
-            url: "https://www.linkedin.com/in/leandro-gavidia/"
+            url: "https://www.linkedin.com/in/leandrogavidia/"
         },
         {
             text: "GitHub Logo",
             image: githubLogo,
-            url: "https://github.com/LeanderGS/"
+            url: "https://github.com/leandrogavidia/"
         }
     ];
 
